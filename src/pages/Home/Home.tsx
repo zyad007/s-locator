@@ -20,6 +20,7 @@ const Home = () => {
     setSelectedTab(tab);
   }
 
+  
   const { openModal } = useUIContext();
   const [hasOpened, setHasOpened] = useState(false);
 
