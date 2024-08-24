@@ -47,7 +47,7 @@ function MultipleLayersSetting(props: MultipleLayersSettingProps) {
   }
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container + ' h-20 w-full'}>
       <button className={styles.closeButton} onClick={handleRemoveLayer}>
         <FaTrash />
       </button>

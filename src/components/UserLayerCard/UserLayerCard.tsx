@@ -32,8 +32,8 @@ function UserLayerCard(props: UserLayerCardProps) {
             </div>
           </div>
           <div className={styles.metaDataWrapper}>
-            <span className={styles.catalogueRow}>{props.legend}</span>
-            <p className={styles.catalogueDesc}>{props.description}</p>
+            <span className={styles.catalogueRow}>Legend: {props.legend}</span>
+            <p className={styles.catalogueDesc}>Description: {props.description}</p>
           </div>
         </div>
         <ul className={styles.cardActions}>

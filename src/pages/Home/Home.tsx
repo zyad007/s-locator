@@ -7,6 +7,8 @@ import CatalogForm from "../../components/CatalogFormLoader/CatalogFormLoader";
 import LayerFormLoader from "../../components/LayerFormLoader/LayerFormLoader";
 import CatalogMenu from "../../components/CatalogMenu/CatalogMenu";
 import CatalogFormLoader from "../../components/CatalogFormLoader/CatalogFormLoader";
+import DataContainer from "../../components/DataContainer/DataContainer";
+import { useUIContext } from "../../context/UIContext";
 
 const Home = () => {
   const { isAuthenticated } = useAuth();
@@ -17,6 +19,18 @@ const Home = () => {
   const handleTabSwitch = (tab: 'LAYER' | 'CATALOG') => {
     setSelectedTab(tab);
   }
+
+  const { openModal } = useUIContext();
+  const [hasOpened, setHasOpened] = useState(false);
+
+  useEffect(() => {
+    if (!hasOpened) {
+      openModal(<DataContainer />, {
+        darkBackground: true,
+      });
+      setHasOpened(true);
+    }
+  }, [hasOpened, openModal]);
 
   useEffect(() => {
     if (!isAuthenticated && selectedTab === 'CATALOG') nav("/auth");
