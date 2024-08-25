@@ -21,17 +21,17 @@ const Profile = () => {
 
                 <div className='flex flex-col justify-center items-center'>
 
-                    <Link className='text-[#115740] w-full py-2 pl-8 bg-gray-200 mb-4 border-b border-t border-[#115740] font-bold hover:bg-gray-100 transition-all'
+                    <Link className='text-[#115740] w-full py-2 pl-8  mb-2 font-bold hover:bg-gray-100 transition-all'
                         to={'/profile'}>Account</Link>
 
-                    <Link className='text-[#115740] w-full py-2 pl-8 bg-gray-200 mb-4 border-b border-t border-[#115740] font-bold hover:bg-gray-100 transition-all'
-                        to={'/profile'}>Change Password</Link>
+                    <Link className='text-[#115740] w-full py-2 pl-8  mb-2 font-bold hover:bg-gray-100 transition-all'
+                        to={'/profile/change-password'}>Change Password</Link>
 
-                    <Link className='text-[#115740] w-full py-2 pl-8 bg-gray-200 mb-4 border-b border-t border-[#115740] font-bold hover:bg-gray-100 transition-all'
-                        to={'/profile'}>Change Email</Link>
+                    <Link className='text-[#115740] w-full py-2 pl-8  mb-2 font-bold hover:bg-gray-100 transition-all'
+                        to={'/profile/change-email'}>Change Email</Link>
 
-                    <Link className='text-[#115740] w-full py-2 pl-8 bg-gray-200 mb-4 border-b border-t border-[#115740] font-bold hover:bg-gray-100 transition-all'
-                        to={'/profile'}>Payment Option</Link>
+                    <Link className='text-[#115740] w-full py-2 pl-8  mb-2 font-bold hover:bg-gray-100 transition-all'
+                        to={'/profile/payment-option'}>Payment Option</Link>
 
                 </div>
             </div>

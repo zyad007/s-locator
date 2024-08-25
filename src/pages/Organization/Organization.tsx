@@ -22,8 +22,8 @@ const Organization = () => {
 
                 <div className='flex flex-col justify-center items-center'>
 
-                    <Link className='text-[#115740] w-full py-2 pl-8 bg-gray-200 mb-4 border-b border-t border-[#115740] font-bold hover:bg-gray-100 transition-all'
-                        to={'/profile'}>Organization</Link>
+                    <Link className='text-[#115740] w-full py-2 pl-8  mb-2 font-bold hover:bg-gray-100 transition-all'
+                        to={'/organization'}>Organization</Link>
 
                 </div>
             </div>

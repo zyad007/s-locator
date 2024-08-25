@@ -90,7 +90,7 @@ const SideBar = () => {
                         <div>
                             <MdLogout className='w-6 h-6 transition-all fill-white' />
                         </div>
-                        {!isColabsed && <span className="ml-2 text-white truncate">Logout</span>}
+                        {!isColabsed && <span className="ml-2 text-white truncate">{!(isAuthenticated) ? <>Login</> : <>Logout</>}</span>}
                     </div>
                 </div>
             </div>

@@ -38,16 +38,16 @@ const Layout = () => {
                     <Route path={"/tabularView"} element={<></>} />
                     <Route path={"/profile"} element={<ProfileLayout />}>
                         <Route path='' element={<ProfileMain />} />
-                        <Route path='change-password' element={<>Change Password</>} />
-                        <Route path='change-email' element={<>Change Email</>} />
-                        <Route path='payment-option' element={<>Payment Options</>} />
+                        <Route path='change-password' element={<CommingSoon data={'Changing Password'} />} />
+                        <Route path='change-email' element={<CommingSoon data={'Changing Email'} />} />
+                        <Route path='payment-option' element={<CommingSoon data={'Payment Option'} />} />
                     </Route>
                     <Route path={"/organization"} element={<OrganizationLayout />}>
-
+                        <Route path='' element={<CommingSoon data={'Organization Features'} />} />
                     </Route>
                     <Route path={"/billing"} element={<BillingLayout />}>
-                        <Route path='' element={<InternalCostEstimator />}/>
-                        <Route path='price' />
+                        <Route path='' element={<InternalCostEstimator />} />
+                        <Route path='price' element={<CommingSoon data={'Price'} />}/>
                     </Route>
                 </Routes>
             </>
@@ -56,3 +56,10 @@ const Layout = () => {
 }
 
 export default Layout;
+
+
+const CommingSoon = ({data}: {data: string}) => {
+    return (
+        <div className='w-full h-full flex justify-center items-center text-4xl'>{data} Comming Soon...</div>
+    );
+}

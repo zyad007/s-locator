@@ -32,16 +32,16 @@ function SaveOptions() {
 
   function handleSaveClick() {
     handleSaveLayer();
-    !isLayerContextActive && setSidebarMode('catalog')
+    // !isLayerContextActive && setSidebarMode('catalog')
 
-    layerContext.resetFormStage();
+    // layerContext.resetFormStage();
   }
 
   return (
     <div className={styles.container}>
       {
-        (saveResponse || isError) ?
-          (saveResponse) ? <SavedIconFeedback /> : <ErrorIconFeedback />
+        !!(saveResponse) ?
+          <SavedIconFeedback />
           :
 
           <><h2 className='text-xl font-semibold mb-8'>Select Your Preferred Saving Option</h2>

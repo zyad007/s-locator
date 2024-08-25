@@ -254,7 +254,7 @@ function MapContainer() {
   return (
     <div className="w-[80%] h-full relative overflow-hidden ">
       <div
-        className="absolute top-0 bottom-0 left-0 right-0"
+        className="absolute w-full h-full"
         id="map-container"
         ref={mapContainerRef}
       // style={{ width: "96%", height: "100vh", zIndex: 99 }}

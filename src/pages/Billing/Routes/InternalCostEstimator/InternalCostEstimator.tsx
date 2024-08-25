@@ -68,7 +68,7 @@ function InternalCostEstimator() {
     }
 
     return (
-        <div className="h-full w-full flex flex-col justify-between items-center">
+        <div className="h-full w-1/3 flex flex-col justify-between items-center">
 
             <div className="h-[90%] w-full pl-4 pr-2 overflow-y-auto px-24 ">
 

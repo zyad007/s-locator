@@ -11,7 +11,7 @@ import { useNavigate } from "react-router";
 
 
 const FetchDatasetForm = () => {
-    
+
     const nav = useNavigate()
 
     // LAYER CONTEXT
@@ -269,7 +269,7 @@ const FetchDatasetForm = () => {
                             <div key={category} className={styles.categoryGroup}>
 
                                 <button
-                                    className="font-semibold cursor-pointer flex justify-start items-center w-full hover:bg-gray-200 transition-all rounded"
+                                    className="font-semibold text-lg cursor-pointer flex justify-start items-center w-full hover:bg-gray-200 transition-all rounded"
                                     onClick={() => {
                                         if (openedCategories.includes(category)) {
                                             setOpenedCategories([...openedCategories.filter(x => x !== category)])
@@ -328,7 +328,11 @@ const FetchDatasetForm = () => {
 
                     <button className="w-full h-full bg-[#115740] text-white flex justify-center items-center font-semibold rounded-lg hover:bg-[#123f30] transition-all cursor-pointer"
                         onClick={(e) => {
-                            if(!isAuthenticated) nav('/auth')
+                            if (!isAuthenticated) nav('/auth')
+                            if (password !== '1235') {
+                                setIsError(new Error('Wrong Password'));
+                                return;
+                            }
                             handleButtonClick('full data', e)
                         }}
                     >

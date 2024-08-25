@@ -171,7 +171,7 @@ const Auth = () => {
   };
 
   return (
-    <div className="w-full h-full">
+    <div className="w-full h-full border-l">
       <div className={styles.authContainer}>
         <div className={styles.authCard}>
           <h2 className={styles.authTitle}>

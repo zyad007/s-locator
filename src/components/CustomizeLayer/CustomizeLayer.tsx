@@ -17,6 +17,7 @@ function CustomizeLayer() {
     setReqSaveLayer,
     incrementFormStage,
     resetFormStage,
+    resetFetchDatasetForm,
     selectedColor,
     showLoaderTopup,
   } = useLayerContext();
@@ -69,6 +70,7 @@ function CustomizeLayer() {
   }
 
   function handleDiscardClick() {
+    resetFetchDatasetForm();
     resetFormStage();
   }
 

@@ -141,6 +141,12 @@ export function LayerProvider(props: { children: ReactNode }) {
       authResponse.idToken
     );
 
+    setTimeout(() => {
+      resetFormStage();
+      setSaveResponse(null);
+      resetFetchDatasetForm();
+    }, 1000)
+
   }
 
   function resetFormStage() {
@@ -347,6 +353,7 @@ export function LayerProvider(props: { children: ReactNode }) {
     setTextSearchInput('');
     setSearchType('new nearby search');
     setPassword('');
+    setGeoPoints([])
   };
 
   useEffect(

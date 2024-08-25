@@ -9,6 +9,7 @@ import CatalogMenu from "../../components/CatalogMenu/CatalogMenu";
 import CatalogFormLoader from "../../components/CatalogFormLoader/CatalogFormLoader";
 import DataContainer from "../../components/DataContainer/DataContainer";
 import { useUIContext } from "../../context/UIContext";
+import { useCatalogContext } from "../../context/CatalogContext";
 
 const Home = () => {
   const { isAuthenticated } = useAuth();
@@ -20,18 +21,28 @@ const Home = () => {
     setSelectedTab(tab);
   }
 
-  
-  const { openModal } = useUIContext();
+
+  const { openModal, resetViewState } = useUIContext();
   const [hasOpened, setHasOpened] = useState(false);
 
+  const { setSelectedContainerType } = useCatalogContext();
+
   useEffect(() => {
-    if (!hasOpened) {
-      openModal(<DataContainer />, {
-        darkBackground: true,
-      });
-      setHasOpened(true);
-    }
-  }, [hasOpened, openModal]);
+    setSelectedContainerType('Home')
+    openModal(<DataContainer />, {
+      darkBackground: true,
+    });
+    setHasOpened(true);
+  }, [])
+
+  // useEffect(() => {
+  //   if (!hasOpened) {
+  //     openModal(<DataContainer />, {
+  //       darkBackground: true,
+  //     });
+  //     setHasOpened(true);
+  //   }
+  // }, [hasOpened, openModal]);
 
   useEffect(() => {
     if (!isAuthenticated && selectedTab === 'CATALOG') nav("/auth");

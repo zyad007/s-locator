@@ -54,7 +54,7 @@ const Dataview: React.FC = () => {
   const nav = useNavigate();
 
   useEffect(() => {
-    if (!isAuthenticated) nav("/auth");
+    // if (!isAuthenticated) nav("/auth");
   }, []);
 
   useEffect(() => {
