@@ -16,6 +16,7 @@ function CatalogMenu() {
     setLegendList,
     geoPoints,
     setGeoPoints,
+    resetFormStage,
   } = useCatalogContext();
 
   useEffect(
@@ -25,6 +26,12 @@ function CatalogMenu() {
     },
     [setGeoPoints]
   );
+
+
+useEffect(() => {
+    resetFormStage('catalog')
+    setSidebarMode('catalog')
+}, [])
 
   function openCatalogModal(contentType: "Catalogue" | "Layer") {
     setSelectedContainerType(contentType);

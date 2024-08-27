@@ -58,6 +58,7 @@ function MapContainer() {
 
   useEffect(
     function () {
+      console.log('UseEffect MapContainer [GeoPoints]');
       function addGeoPoints() {
         if (mapRef.current && styleLoadedRef.current) {
           const existingLayers = mapRef.current.getStyle().layers;
