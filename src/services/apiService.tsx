@@ -38,7 +38,6 @@ export async function HttpReq<T>(
       : {};
 
     const response = await apiClient[method](end_point, wrappedBody, { headers });
-
     const message: string = response.data.message;
     const request_id: string = response.data.request_id;
     const data: T = response.data.data;
